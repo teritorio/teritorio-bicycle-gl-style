@@ -607,7 +607,7 @@
       "layout": {
         "line-cap": "round",
         "line-join": "round",
-        "visibility": "none"
+        "visibility": "visible"
       },
       "paint": {
         "line-color": [
@@ -623,8 +623,8 @@
           "#ae9880",
           "#ae9880"
         ],
-        "line-width": {"stops": [[8, 2], [12, 4], [15, 16], [18, 20]]},
-        "line-opacity": 0.5
+        "line-width": {"stops": [[8, 2], [12, 4], [15, 8], [18, 10]]},
+        "line-offset": {"stops": [[8, -1], [12, -2], [15, -4], [18, -5]]}
       }
     },
     {
@@ -653,8 +653,8 @@
           "#e097da",
           "#e097da"
         ],
-        "line-width": {"stops": [[8, 2], [12, 4], [15, 16], [18, 20]]},
-        "line-opacity": 0.5
+        "line-width": {"stops": [[8, 2], [12, 4], [15, 8], [18, 10]]},
+        "line-offset": {"stops": [[8, 1], [12, 2], [15, 4], [18, 5]]}
       }
     },
     {
@@ -2599,82 +2599,6 @@
       }
     },
     {
-      "id": "route_hiking-upper",
-      "type": "line",
-      "source": "openmaptiles",
-      "source-layer": "bicycle_hiking_route",
-      "maxzoom": 13,
-      "filter": [
-        "all",
-        ["has", "hiking_network"],
-        [
-          ">=",
-          ["zoom"],
-          ["match", ["get", "hiking_network"], 1, 4, 2, 5, 3, 8, 4, 10, 10]
-        ]
-      ],
-      "layout": {
-        "line-cap": "round",
-        "line-join": "round",
-        "visibility": "none"
-      },
-      "paint": {
-        "line-color": [
-          "match",
-          ["get", "hiking_network"],
-          1,
-          "#5b3c11",
-          2,
-          "#775935",
-          3,
-          "#93775a",
-          4,
-          "#ae9880",
-          "#ae9880"
-        ],
-        "line-width": {"stops": [[8, 2], [12, 4], [15, 16], [18, 20]]},
-        "line-opacity": {"stops": [[11, 1], [13, 0]]}
-      }
-    },
-    {
-      "id": "route_bicycle-upper",
-      "type": "line",
-      "source": "openmaptiles",
-      "source-layer": "bicycle_hiking_route",
-      "maxzoom": 13,
-      "filter": [
-        "all",
-        ["has", "bicycle_network"],
-        [
-          ">=",
-          ["zoom"],
-          ["match", ["get", "bicycle_network"], 1, 4, 2, 5, 3, 8, 4, 10, 10]
-        ]
-      ],
-      "layout": {
-        "line-cap": "round",
-        "line-join": "round",
-        "visibility": "visible"
-      },
-      "paint": {
-        "line-color": [
-          "match",
-          ["get", "bicycle_network"],
-          1,
-          "#b600b3",
-          2,
-          "#c54ac0",
-          3,
-          "#d372cd",
-          4,
-          "#e097da",
-          "#e097da"
-        ],
-        "line-width": {"stops": [[8, 2], [12, 4], [15, 16], [18, 20]]},
-        "line-opacity": {"stops": [[11, 1], [13, 0]]}
-      }
-    },
-    {
       "id": "tree",
       "type": "circle",
       "source": "openmaptiles",
@@ -2809,6 +2733,84 @@
         "text-size": {"stops": [[17, 8], [19, 10]]}
       },
       "paint": {"text-color": "rgba(160, 160, 160, 1)"}
+    },
+    {
+      "id": "route_hiking-upper",
+      "type": "line",
+      "source": "openmaptiles",
+      "source-layer": "bicycle_hiking_route",
+      "maxzoom": 13,
+      "filter": [
+        "all",
+        ["has", "hiking_network"],
+        [
+          ">=",
+          ["zoom"],
+          ["match", ["get", "hiking_network"], 1, 4, 2, 5, 3, 8, 4, 10, 10]
+        ]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": [
+          "match",
+          ["get", "hiking_network"],
+          1,
+          "#5b3c11",
+          2,
+          "#775935",
+          3,
+          "#93775a",
+          4,
+          "#ae9880",
+          "#ae9880"
+        ],
+        "line-width": {"stops": [[8, 2], [12, 4], [15, 8], [18, 10]]},
+        "line-opacity": {"stops": [[11, 1], [13, 0]]},
+        "line-offset": {"stops": [[8, -1], [12, -2], [15, -4], [18, -5]]}
+      }
+    },
+    {
+      "id": "route_bicycle-upper",
+      "type": "line",
+      "source": "openmaptiles",
+      "source-layer": "bicycle_hiking_route",
+      "maxzoom": 13,
+      "filter": [
+        "all",
+        ["has", "bicycle_network"],
+        [
+          ">=",
+          ["zoom"],
+          ["match", ["get", "bicycle_network"], 1, 4, 2, 5, 3, 8, 4, 10, 10]
+        ]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": [
+          "match",
+          ["get", "bicycle_network"],
+          1,
+          "#b600b3",
+          2,
+          "#c54ac0",
+          3,
+          "#d372cd",
+          4,
+          "#e097da",
+          "#e097da"
+        ],
+        "line-width": {"stops": [[8, 2], [12, 4], [15, 8], [18, 10]]},
+        "line-opacity": {"stops": [[11, 1], [13, 0]]},
+        "line-offset": {"stops": [[8, 1], [12, 2], [15, 4], [18, 5]]}
+      }
     },
     {
       "id": "waterway-name",
@@ -2984,7 +2986,7 @@
         "text-font": ["Noto Sans Regular"],
         "text-max-width": 6,
         "text-size": {"stops": [[6, 10], [12, 14]]},
-        "visibility": "none"
+        "visibility": "visible"
       },
       "paint": {
         "text-color": [

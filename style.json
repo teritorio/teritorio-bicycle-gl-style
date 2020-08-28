@@ -1,6 +1,6 @@
 {
   "version": 8,
-  "name": "Teritorio Basic",
+  "name": "Teritorio Bicycle",
   "metadata": {
     "mapbox:autocomposite": false,
     "mapbox:groups": {
@@ -31,7 +31,7 @@
       "url": "https://vecto.teritorio.xyz/data/alti.json?key={key}"
     }
   },
-  "sprite": "https://vecto.teritorio.xyz/styles/teritorio-basic/sprite",
+  "sprite": "https://vecto.teritorio.xyz/styles/teritorio-bicycle/sprite",
   "glyphs": "https://vecto.teritorio.xyz/fonts/{fontstack}/{range}.pbf?key={key}",
   "layers": [
     {
@@ -3699,5 +3699,5 @@
       }
     }
   ],
-  "id": "teritorio-basic"
+  "id": "teritorio-bicycle"
 }

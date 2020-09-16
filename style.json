@@ -601,7 +601,7 @@
       "id": "route_hiking-lower",
       "type": "line",
       "source": "openmaptiles",
-      "source-layer": "bicycle_hiking_route",
+      "source-layer": "route_bicycle_hiking",
       "minzoom": 11,
       "filter": ["all", ["has", "hiking_network"]],
       "layout": {
@@ -631,7 +631,7 @@
       "id": "route_bicycle-lower",
       "type": "line",
       "source": "openmaptiles",
-      "source-layer": "bicycle_hiking_route",
+      "source-layer": "route_bicycle_hiking",
       "minzoom": 11,
       "filter": ["all", ["has", "bicycle_network"]],
       "layout": {
@@ -2738,7 +2738,7 @@
       "id": "route_hiking-upper",
       "type": "line",
       "source": "openmaptiles",
-      "source-layer": "bicycle_hiking_route",
+      "source-layer": "route_bicycle_hiking",
       "maxzoom": 13,
       "filter": [
         "all",
@@ -2777,7 +2777,7 @@
       "id": "route_bicycle-upper",
       "type": "line",
       "source": "openmaptiles",
-      "source-layer": "bicycle_hiking_route",
+      "source-layer": "route_bicycle_hiking",
       "maxzoom": 13,
       "filter": [
         "all",
@@ -2970,7 +2970,7 @@
       "id": "route_hiking-label",
       "type": "symbol",
       "source": "openmaptiles",
-      "source-layer": "bicycle_hiking_route",
+      "source-layer": "route_bicycle_hiking",
       "filter": [
         "all",
         ["has", "hiking_network"],
@@ -3011,7 +3011,7 @@
       "id": "route_bicycle-label",
       "type": "symbol",
       "source": "openmaptiles",
-      "source-layer": "bicycle_hiking_route",
+      "source-layer": "route_bicycle_hiking",
       "filter": [
         "all",
         ["has", "bicycle_network"],

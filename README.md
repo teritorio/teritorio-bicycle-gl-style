@@ -2,9 +2,9 @@
 
 Derived from [OSM Bright](https://github.com/openmaptiles/osm-bright-gl-style)
 
-A GL JS basemap style showcasing OpenStreetMap tourism data. It is using the vector tile schema of [OpenMapTiles](https://github.com/openmaptiles/openmaptiles).
+A GL JS basemap style showcasing Bicycle features from OpenStreetMap. It is using the vector tile schema of [OpenMapTiles](https://github.com/openmaptiles/openmaptiles).
 
-## Base for the Teritorio Styles Family
+## Teritorio Styles Family
 
 - [OSM Bright](https://github.com/openmaptiles/osm-bright-gl-style)
     - [Teritorio Basic](https://github.com/teritorio/teritorio-basic-gl-style)
@@ -15,6 +15,10 @@ A GL JS basemap style showcasing OpenStreetMap tourism data. It is using the vec
         - [Teritorio Bicycle](https://github.com/teritorio/teritorio-bicycle-gl-style) (Network and Facilities)
 
 ## Preview
+
+![](networks.png)
+
+![](facilities.png)
 
 ## Edit the Style
 

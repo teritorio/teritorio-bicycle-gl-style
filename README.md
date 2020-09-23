@@ -2,10 +2,9 @@
 
 Derived from [OSM Bright](https://github.com/openmaptiles/osm-bright-gl-style)
 
-A Mapbox GL map style showcasing OpenStreetMap data.
-It is using the vector tile derived from the schema of [OpenMapTiles](https://github.com/openmaptiles/openmaptiles).
+A Mapbox GL Bicycle map build on OpenStreetMap and [OpenMapTiles](https://github.com/openmaptiles/openmaptiles).
 
-## Base for the Teritorio Styles Family
+## Teritorio Styles Family
 
 - [OSM Bright](https://github.com/openmaptiles/osm-bright-gl-style)
     - [Teritorio Basic](https://github.com/teritorio/teritorio-basic-gl-style)
@@ -16,6 +15,10 @@ It is using the vector tile derived from the schema of [OpenMapTiles](https://gi
         - [Teritorio Bicycle](https://github.com/teritorio/teritorio-bicycle-gl-style) (Network and Facilities)
 
 ## Preview
+
+![](networks.png)
+
+![](facilities.png)
 
 ## Edit the Style
 

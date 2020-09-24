@@ -1632,7 +1632,7 @@
           14,
           0.5
         ],
-        "line-width": {"stops": [[13, 2], [17, 5]]},
+        "line-width": {"stops": [[13, 2], [17, 5], [20, 10]]},
         "line-color": [
           "match",
           ["get", "facility_right"],
@@ -1704,7 +1704,7 @@
       "layout": {
         "visibility": "visible",
         "line-join": "round",
-        "line-cap": "round"
+        "line-cap": "butt"
       },
       "paint": {
         "line-offset": [
@@ -1716,7 +1716,9 @@
           16,
           -5,
           18,
-          -8
+          -8,
+          20,
+          -16
         ],
         "line-opacity": [
           "interpolate",
@@ -1731,7 +1733,7 @@
           14,
           0.5
         ],
-        "line-width": {"stops": [[13, 2], [17, 5]]},
+        "line-width": {"stops": [[13, 2], [17, 5], [20, 10]]},
         "line-color": [
           "match",
           ["get", "facility_left"],
@@ -1761,7 +1763,7 @@
       ],
       "layout": {
         "visibility": "visible",
-        "line-cap": "round",
+        "line-cap": "butt",
         "line-join": "round"
       },
       "paint": {
@@ -1778,7 +1780,7 @@
           14,
           0.5
         ],
-        "line-width": {"stops": [[13, 2], [17, 5]]},
+        "line-width": {"stops": [[13, 2], [17, 5], [20, 10]]},
         "line-color": [
           "match",
           ["get", "facility_right"],
@@ -1799,7 +1801,9 @@
           16,
           5,
           18,
-          8
+          8,
+          20,
+          16
         ]
       }
     },
@@ -3168,31 +3172,24 @@
       "paint": {"icon-opacity": 0.5}
     },
     {
-      "id": "bicycle-track-left",
+      "id": "bicycle-track",
       "type": "line",
       "source": "openmaptiles",
       "source-layer": "transportation_bicycle",
-      "filter": ["all", ["==", "facility_left", "track"]],
-      "layout": {"line-join": "round", "visibility": "visible"},
+      "filter": [
+        "any",
+        ["==", "facility_right", "track"],
+        ["==", "facility_left", "track"]
+      ],
+      "layout": {
+        "line-join": "round",
+        "visibility": "visible",
+        "line-cap": "butt"
+      },
       "paint": {
         "line-color": "rgba(0, 12, 255, 1)",
-        "line-width": 5,
-        "line-opacity": {"stops": [[11, 0.2], [12, 0.4]]},
-        "line-offset": -5
-      }
-    },
-    {
-      "id": "bicycle-track-right",
-      "type": "line",
-      "source": "openmaptiles",
-      "source-layer": "transportation_bicycle",
-      "filter": ["all", ["==", "facility_right", "track"]],
-      "layout": {"line-join": "round", "visibility": "visible"},
-      "paint": {
-        "line-color": "rgba(0, 12, 255, 1)",
-        "line-width": 5,
-        "line-opacity": {"stops": [[11, 0.2], [12, 0.4]]},
-        "line-offset": 5
+        "line-width": {"stops": [[11, 3], [17, 10]]},
+        "line-opacity": {"stops": [[11, 0.2], [12, 0.4]]}
       }
     },
     {
@@ -3201,7 +3198,11 @@
       "source": "openmaptiles",
       "source-layer": "transportation_bicycle",
       "filter": ["all", ["==", "facility", "cycleway"]],
-      "layout": {"visibility": "visible", "line-join": "round"},
+      "layout": {
+        "visibility": "visible",
+        "line-join": "round",
+        "line-cap": "butt"
+      },
       "paint": {
         "line-color": "rgba(0, 12, 255, 1)",
         "line-width": {"stops": [[11, 3], [17, 10]]},

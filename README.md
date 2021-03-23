@@ -20,6 +20,10 @@ A Mapbox GL Bicycle map build on OpenStreetMap and [OpenMapTiles](https://github
 
 ![](facilities.png)
 
+## OpenMapTiles Data Layer
+
+This style require the extra layers from [openmaptiles-contrib-bicycle_hiking_route](https://github.com/makina-maps/openmaptiles-contrib-bicycle_hiking_route).
+
 ## Edit the Style
 
 Use the [Maputnik CLI](http://openmaptiles.org/docs/style/maputnik/) to edit and develop the style.

@@ -20,6 +20,10 @@ A GL JS basemap style showcasing Bicycle features from OpenStreetMap. It is usin
 
 ![](facilities.png)
 
+## OpenMapTiles Data Layer
+
+This style require the extra layers from [openmaptiles-contrib-bicycle_hiking_route](https://github.com/makina-maps/openmaptiles-contrib-bicycle_hiking_route).
+
 ## Edit the Style
 
 Use the map editor in MapTiler Cloud to view and adjust this map. Open the editor and upload style from this repository or host from various styles available on the platform.

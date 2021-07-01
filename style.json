@@ -1524,6 +1524,7 @@
         "all",
         ["==", ["get", "access_right"], 1],
         ["==", ["get", "access_left"], -1],
+        ["has", "facility_left"],
         ["==", ["get", "facility_left"], ["get", "facility_right"]]
       ],
       "layout": {
@@ -1611,6 +1612,7 @@
       "source-layer": "transportation_bicycle",
       "filter": [
         "all",
+        ["has", "facility_left"],
         ["==", ["get", "access_left"], -1],
         [
           "any",
@@ -1671,6 +1673,7 @@
       "source-layer": "transportation_bicycle",
       "filter": [
         "all",
+        ["has", "facility_right"],
         ["==", ["get", "access_right"], 1],
         [
           "any",

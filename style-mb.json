@@ -27,7 +27,7 @@
       "url": "https://vecto.teritorio.xyz/data/alti.json?key={key}"
     }
   },
-  "sprite": "mapbox://sprites/undefined/teritorio-basic",
+  "sprite": "mapbox://sprites/undefined/teritorio-bicycle",
   "glyphs": "mapbox://fonts/undefined/{fontstack}/{range}.pbf",
   "layers": [
     {
@@ -9594,5 +9594,5 @@
       }
     }
   ],
-  "id": "teritorio-basic"
+  "id": "teritorio-bicycle"
 }

@@ -1,6 +1,6 @@
 {
   "version": 8,
-  "name": "Teritorio Bicycle/Hiking",
+  "name": "Bright Bicycle/Hiking",
   "metadata": {
     "openmaptiles:mapbox:source:url": "https://github.com/makina-maps/osm-bright-bicycle-gl-style",
     "openmaptiles:version": "3.x",
@@ -1442,31 +1442,6 @@
             ]
           ]
         }
-      }
-    },
-    {
-      "id": "housenumber",
-      "type": "symbol",
-      "source": "openmaptiles",
-      "source-layer": "housenumber",
-      "minzoom": 17,
-      "filter": [
-        "==",
-        "$type",
-        "Point"
-      ],
-      "layout": {
-        "text-field": [
-          "get",
-          "housenumber"
-        ],
-        "text-font": [
-          "Noto Sans Regular"
-        ],
-        "text-size": 10
-      },
-      "paint": {
-        "text-color": "rgba(160, 160, 160, 1)"
       }
     },
     {
@@ -6941,102 +6916,6 @@
       }
     },
     {
-      "id": "route-cycleway",
-      "type": "line",
-      "metadata": {
-        "mapbox:group": "1444849345966.4436"
-      },
-      "source": "openmaptiles",
-      "source-layer": "route",
-      "filter": [
-        "all",
-        [
-          "in",
-          "bicycle_network",
-          1,
-          2
-        ]
-      ],
-      "layout": {
-        "line-join": "round",
-        "line-cap": "round"
-      },
-      "paint": {
-        "line-color": "rgba(29, 60, 88, 1)",
-        "line-width": {
-          "base": 1.2,
-          "stops": [
-            [
-              6,
-              0.5
-            ],
-            [
-              9,
-              1
-            ],
-            [
-              20,
-              2
-            ]
-          ]
-        },
-        "line-opacity": 1,
-        "line-dasharray": [
-          2,
-          4
-        ],
-        "line-offset": 2
-      }
-    },
-    {
-      "id": "route-hiking",
-      "type": "line",
-      "metadata": {
-        "mapbox:group": "1444849345966.4436"
-      },
-      "source": "openmaptiles",
-      "source-layer": "route",
-      "filter": [
-        "all",
-        [
-          "in",
-          "hiking_network",
-          1,
-          2
-        ]
-      ],
-      "layout": {
-        "line-cap": "round",
-        "line-join": "round",
-        "visibility": "none"
-      },
-      "paint": {
-        "line-color": "rgba(152, 118, 236, 1)",
-        "line-width": {
-          "base": 1.2,
-          "stops": [
-            [
-              6,
-              0.5
-            ],
-            [
-              9,
-              1
-            ],
-            [
-              20,
-              2
-            ]
-          ]
-        },
-        "line-offset": 2,
-        "line-dasharray": [
-          2,
-          4
-        ]
-      }
-    },
-    {
       "id": "cablecar",
       "type": "line",
       "source": "openmaptiles",
@@ -7341,6 +7220,55 @@
             ]
           ]
         }
+      }
+    },
+    {
+      "id": "housenumber",
+      "type": "symbol",
+      "source": "openmaptiles",
+      "source-layer": "housenumber",
+      "minzoom": 17,
+      "filter": [
+        "==",
+        "$type",
+        "Point"
+      ],
+      "layout": {
+        "text-field": [
+          "get",
+          "housenumber"
+        ],
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-allow-overlap": {
+          "stops": [
+            [
+              1,
+              false
+            ],
+            [
+              18,
+              true
+            ]
+          ]
+        },
+        "text-ignore-placement": false,
+        "text-size": {
+          "stops": [
+            [
+              17,
+              8
+            ],
+            [
+              19,
+              10
+            ]
+          ]
+        }
+      },
+      "paint": {
+        "text-color": "rgba(160, 160, 160, 1)"
       }
     },
     {

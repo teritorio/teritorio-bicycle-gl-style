@@ -6917,6 +6917,39 @@
       }
     },
     {
+      "id": "tree",
+      "type": "circle",
+      "source": "openmaptiles",
+      "source-layer": "tree",
+      "paint": {
+        "circle-color": "rgba(112, 191, 102, 1)",
+        "circle-opacity": {
+          "stops": [
+            [
+              15,
+              0.1
+            ],
+            [
+              21,
+              0.7
+            ]
+          ]
+        },
+        "circle-radius": {
+          "stops": [
+            [
+              15,
+              2
+            ],
+            [
+              18,
+              8
+            ]
+          ]
+        }
+      }
+    },
+    {
       "id": "cablecar",
       "type": "line",
       "source": "openmaptiles",

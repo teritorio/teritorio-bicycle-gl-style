@@ -7675,408 +7675,6 @@
       }
     },
     {
-      "id": "poi-level-3-picto",
-      "type": "symbol",
-      "source": "openmaptiles",
-      "source-layer": "poi_tourism",
-      "minzoom": 15,
-      "filter": [
-        "all",
-        [
-          ">=",
-          [
-            "get",
-            "rank"
-          ],
-          25
-        ],
-        [
-          "<=",
-          [
-            "get",
-            "zoom"
-          ],
-          [
-            "zoom"
-          ]
-        ],
-        [
-          "any",
-          [
-            "!",
-            [
-              "has",
-              "level"
-            ]
-          ],
-          [
-            "==",
-            [
-              "get",
-              "level"
-            ],
-            0
-          ]
-        ],
-        [
-          "let",
-          "_bloc_name",
-          "styleFilter",
-          [
-            "let",
-            "style",
-            [
-              "get",
-              "style"
-            ],
-            [
-              "==",
-              [
-                "var",
-                "style"
-              ],
-              "•"
-            ]
-          ]
-        ]
-      ],
-      "layout": {
-        "icon-image": [
-          "concat",
-          [
-            "get",
-            "superclass"
-          ],
-          [
-            "case",
-            [
-              "has",
-              "class"
-            ],
-            [
-              "concat",
-              "-",
-              [
-                "get",
-                "class"
-              ]
-            ],
-            ""
-          ],
-          [
-            "case",
-            [
-              "has",
-              "subclass"
-            ],
-            [
-              "concat",
-              "-",
-              [
-                "get",
-                "subclass"
-              ]
-            ],
-            ""
-          ],
-          [
-            "get",
-            "style"
-          ]
-        ],
-        "text-anchor": "top",
-        "text-field": "{name:latin}\n{name:nonlatin}",
-        "text-font": [
-          "Noto Sans Regular"
-        ],
-        "text-max-width": 9,
-        "text-offset": [
-          0,
-          1
-        ],
-        "text-padding": 2,
-        "text-size": 12,
-        "text-optional": true,
-        "text-allow-overlap": false
-      },
-      "paint": {
-        "text-color": "#666",
-        "text-halo-blur": 0.5,
-        "text-halo-color": "#ffffff",
-        "text-halo-width": 1
-      }
-    },
-    {
-      "id": "poi-level-2-picto",
-      "type": "symbol",
-      "source": "openmaptiles",
-      "source-layer": "poi_tourism",
-      "minzoom": 14,
-      "filter": [
-        "all",
-        [
-          "<=",
-          [
-            "get",
-            "rank"
-          ],
-          24
-        ],
-        [
-          ">=",
-          [
-            "get",
-            "rank"
-          ],
-          15
-        ],
-        [
-          "<=",
-          [
-            "get",
-            "zoom"
-          ],
-          [
-            "zoom"
-          ]
-        ],
-        [
-          "any",
-          [
-            "!",
-            [
-              "has",
-              "level"
-            ]
-          ],
-          [
-            "==",
-            [
-              "get",
-              "level"
-            ],
-            0
-          ]
-        ],
-        [
-          "let",
-          "_bloc_name",
-          "styleFilter",
-          [
-            "let",
-            "style",
-            [
-              "get",
-              "style"
-            ],
-            [
-              "==",
-              [
-                "var",
-                "style"
-              ],
-              "•"
-            ]
-          ]
-        ]
-      ],
-      "layout": {
-        "icon-image": [
-          "concat",
-          [
-            "get",
-            "superclass"
-          ],
-          [
-            "case",
-            [
-              "has",
-              "class"
-            ],
-            [
-              "concat",
-              "-",
-              [
-                "get",
-                "class"
-              ]
-            ],
-            ""
-          ],
-          [
-            "case",
-            [
-              "has",
-              "subclass"
-            ],
-            [
-              "concat",
-              "-",
-              [
-                "get",
-                "subclass"
-              ]
-            ],
-            ""
-          ],
-          [
-            "get",
-            "style"
-          ]
-        ],
-        "text-anchor": "top",
-        "text-field": "{name:latin}\n{name:nonlatin}",
-        "text-font": [
-          "Noto Sans Regular"
-        ],
-        "text-max-width": 9,
-        "text-offset": [
-          0,
-          1
-        ],
-        "text-padding": 2,
-        "text-size": 12,
-        "text-optional": true
-      },
-      "paint": {
-        "text-color": "#666",
-        "text-halo-blur": 0.5,
-        "text-halo-color": "#ffffff",
-        "text-halo-width": 1
-      }
-    },
-    {
-      "id": "poi-level-1-picto",
-      "type": "symbol",
-      "source": "openmaptiles",
-      "source-layer": "poi_tourism",
-      "minzoom": 12,
-      "filter": [
-        "all",
-        [
-          "<=",
-          [
-            "get",
-            "rank"
-          ],
-          14
-        ],
-        [
-          "<=",
-          [
-            "get",
-            "zoom"
-          ],
-          [
-            "zoom"
-          ]
-        ],
-        [
-          "any",
-          [
-            "!",
-            [
-              "has",
-              "level"
-            ]
-          ],
-          [
-            "==",
-            [
-              "get",
-              "level"
-            ],
-            0
-          ]
-        ],
-        [
-          "let",
-          "_bloc_name",
-          "styleFilter",
-          [
-            "let",
-            "style",
-            [
-              "get",
-              "style"
-            ],
-            [
-              "==",
-              [
-                "var",
-                "style"
-              ],
-              "•"
-            ]
-          ]
-        ]
-      ],
-      "layout": {
-        "icon-image": [
-          "concat",
-          [
-            "get",
-            "superclass"
-          ],
-          [
-            "case",
-            [
-              "has",
-              "class"
-            ],
-            [
-              "concat",
-              "-",
-              [
-                "get",
-                "class"
-              ]
-            ],
-            ""
-          ],
-          [
-            "case",
-            [
-              "has",
-              "subclass"
-            ],
-            [
-              "concat",
-              "-",
-              [
-                "get",
-                "subclass"
-              ]
-            ],
-            ""
-          ],
-          [
-            "get",
-            "style"
-          ]
-        ],
-        "text-anchor": "top",
-        "text-field": "{name:latin}\n{name:nonlatin}",
-        "text-font": [
-          "Noto Sans Regular"
-        ],
-        "text-max-width": 9,
-        "text-offset": [
-          0,
-          1
-        ],
-        "text-padding": 2,
-        "text-size": 12,
-        "text-optional": true
-      },
-      "paint": {
-        "text-color": "#666",
-        "text-halo-blur": 0.5,
-        "text-halo-color": "#ffffff",
-        "text-halo-width": 1
-      }
-    },
-    {
       "id": "road_oneway",
       "type": "symbol",
       "source": "openmaptiles",
@@ -8444,6 +8042,233 @@
       }
     },
     {
+      "id": "poi-level-3",
+      "type": "symbol",
+      "source": "openmaptiles",
+      "source-layer": "poi",
+      "minzoom": 16,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          ">=",
+          "rank",
+          25
+        ],
+        [
+          "any",
+          [
+            "!has",
+            "level"
+          ],
+          [
+            "==",
+            "level",
+            0
+          ]
+        ]
+      ],
+      "layout": {
+        "icon-image": "{class}_11",
+        "text-anchor": "top",
+        "text-field": "{name:latin}\n{name:nonlatin}",
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-max-width": 9,
+        "text-offset": [
+          0,
+          0.6
+        ],
+        "text-padding": 2,
+        "text-size": 12,
+        "visibility": "visible"
+      },
+      "paint": {
+        "text-color": "#666",
+        "text-halo-blur": 0.5,
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1
+      }
+    },
+    {
+      "id": "poi-level-2",
+      "type": "symbol",
+      "source": "openmaptiles",
+      "source-layer": "poi",
+      "minzoom": 15,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "<=",
+          "rank",
+          24
+        ],
+        [
+          ">=",
+          "rank",
+          15
+        ],
+        [
+          "any",
+          [
+            "!has",
+            "level"
+          ],
+          [
+            "==",
+            "level",
+            0
+          ]
+        ]
+      ],
+      "layout": {
+        "icon-image": "{class}_11",
+        "text-anchor": "top",
+        "text-field": "{name:latin}\n{name:nonlatin}",
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-max-width": 9,
+        "text-offset": [
+          0,
+          0.6
+        ],
+        "text-padding": 2,
+        "text-size": 12,
+        "visibility": "visible"
+      },
+      "paint": {
+        "text-color": "#666",
+        "text-halo-blur": 0.5,
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1
+      }
+    },
+    {
+      "id": "poi-level-1",
+      "type": "symbol",
+      "source": "openmaptiles",
+      "source-layer": "poi",
+      "minzoom": 14,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "<=",
+          "rank",
+          14
+        ],
+        [
+          "has",
+          "name"
+        ],
+        [
+          "any",
+          [
+            "!has",
+            "level"
+          ],
+          [
+            "==",
+            "level",
+            0
+          ]
+        ]
+      ],
+      "layout": {
+        "icon-image": "{class}_11",
+        "text-anchor": "top",
+        "text-field": "{name:latin}\n{name:nonlatin}",
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-max-width": 9,
+        "text-offset": [
+          0,
+          0.6
+        ],
+        "text-padding": 2,
+        "text-size": 12,
+        "visibility": "visible"
+      },
+      "paint": {
+        "text-color": "#666",
+        "text-halo-blur": 0.5,
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1
+      }
+    },
+    {
+      "id": "poi-railway",
+      "type": "symbol",
+      "source": "openmaptiles",
+      "source-layer": "poi",
+      "minzoom": 13,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "has",
+          "name"
+        ],
+        [
+          "==",
+          "class",
+          "railway"
+        ],
+        [
+          "==",
+          "subclass",
+          "station"
+        ]
+      ],
+      "layout": {
+        "icon-allow-overlap": false,
+        "icon-ignore-placement": false,
+        "icon-image": "{class}_11",
+        "icon-optional": false,
+        "text-allow-overlap": false,
+        "text-anchor": "top",
+        "text-field": "{name:latin}\n{name:nonlatin}",
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-ignore-placement": false,
+        "text-max-width": 9,
+        "text-offset": [
+          0,
+          0.6
+        ],
+        "text-optional": true,
+        "text-padding": 2,
+        "text-size": 12
+      },
+      "paint": {
+        "text-color": "#666",
+        "text-halo-blur": 0.5,
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1
+      }
+    },
+    {
       "id": "highway-name-path",
       "type": "symbol",
       "source": "openmaptiles",
@@ -8762,6 +8587,44 @@
       }
     },
     {
+      "id": "airport-label-major",
+      "type": "symbol",
+      "source": "openmaptiles",
+      "source-layer": "aerodrome_label",
+      "minzoom": 10,
+      "filter": [
+        "all",
+        [
+          "has",
+          "iata"
+        ]
+      ],
+      "layout": {
+        "icon-image": "airport_11",
+        "icon-size": 1,
+        "text-anchor": "top",
+        "text-field": "{name:latin}\n{name:nonlatin}",
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-max-width": 9,
+        "text-offset": [
+          0,
+          0.6
+        ],
+        "text-optional": true,
+        "text-padding": 2,
+        "text-size": 12,
+        "visibility": "visible"
+      },
+      "paint": {
+        "text-color": "#666",
+        "text-halo-blur": 0.5,
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1
+      }
+    },
+    {
       "id": "building-3d",
       "type": "fill-extrusion",
       "source": "openmaptiles",
@@ -9076,573 +8939,6 @@
       },
       "paint": {
         "text-color": "#666",
-        "text-halo-blur": 0.5,
-        "text-halo-color": "#ffffff",
-        "text-halo-width": 1
-      }
-    },
-    {
-      "id": "poi-level-3",
-      "type": "symbol",
-      "source": "openmaptiles",
-      "source-layer": "poi_tourism",
-      "minzoom": 15,
-      "filter": [
-        "all",
-        [
-          ">=",
-          [
-            "get",
-            "rank"
-          ],
-          25
-        ],
-        [
-          "<=",
-          [
-            "get",
-            "zoom"
-          ],
-          [
-            "zoom"
-          ]
-        ],
-        [
-          "any",
-          [
-            "!",
-            [
-              "has",
-              "level"
-            ]
-          ],
-          [
-            "==",
-            [
-              "get",
-              "level"
-            ],
-            0
-          ]
-        ],
-        [
-          "let",
-          "_bloc_name",
-          "styleFilter",
-          [
-            "let",
-            "style",
-            [
-              "get",
-              "style"
-            ],
-            [
-              "!=",
-              [
-                "var",
-                "style"
-              ],
-              "•"
-            ]
-          ]
-        ]
-      ],
-      "layout": {
-        "icon-image": [
-          "concat",
-          [
-            "get",
-            "superclass"
-          ],
-          [
-            "case",
-            [
-              "has",
-              "class"
-            ],
-            [
-              "concat",
-              "-",
-              [
-                "get",
-                "class"
-              ]
-            ],
-            ""
-          ],
-          [
-            "case",
-            [
-              "has",
-              "subclass"
-            ],
-            [
-              "concat",
-              "-",
-              [
-                "get",
-                "subclass"
-              ]
-            ],
-            ""
-          ],
-          [
-            "get",
-            "style"
-          ]
-        ],
-        "text-anchor": "top",
-        "text-field": "{name:latin}\n{name:nonlatin}",
-        "text-font": [
-          "Noto Sans Regular"
-        ],
-        "text-max-width": 9,
-        "text-offset": [
-          0,
-          1
-        ],
-        "text-padding": 2,
-        "text-size": 12,
-        "text-optional": true,
-        "text-allow-overlap": false
-      },
-      "paint": {
-        "text-color": [
-          "let",
-          "style",
-          [
-            "get",
-            "style"
-          ],
-          "superclass",
-          [
-            "get",
-            "superclass"
-          ],
-          [
-            "match",
-            [
-              "var",
-              "style"
-            ],
-            "•",
-            "#666",
-            [
-              "match",
-              [
-                "var",
-                "superclass"
-              ],
-              "amenity",
-              "#2a62ac",
-              "catering",
-              "#f09007",
-              "culture",
-              "#76009e",
-              "hosting",
-              "#99163a",
-              "leisure",
-              "#00a757",
-              "local_shop",
-              "#00a0c4",
-              "mobility",
-              "#3b74b9",
-              "products",
-              "#f25c05",
-              "public_landmark",
-              "#1d1d1b",
-              "remarkable",
-              "#e50980",
-              "safety",
-              "#e42224",
-              "services",
-              "#2a62ac",
-              "shopping",
-              "#808080",
-              "#666"
-            ]
-          ]
-        ],
-        "text-halo-blur": 0.5,
-        "text-halo-color": "#ffffff",
-        "text-halo-width": 1
-      }
-    },
-    {
-      "id": "poi-level-2",
-      "type": "symbol",
-      "source": "openmaptiles",
-      "source-layer": "poi_tourism",
-      "minzoom": 14,
-      "filter": [
-        "all",
-        [
-          "<=",
-          [
-            "get",
-            "rank"
-          ],
-          24
-        ],
-        [
-          ">=",
-          [
-            "get",
-            "rank"
-          ],
-          15
-        ],
-        [
-          "<=",
-          [
-            "get",
-            "zoom"
-          ],
-          [
-            "zoom"
-          ]
-        ],
-        [
-          "any",
-          [
-            "!",
-            [
-              "has",
-              "level"
-            ]
-          ],
-          [
-            "==",
-            [
-              "get",
-              "level"
-            ],
-            0
-          ]
-        ],
-        [
-          "let",
-          "_bloc_name",
-          "styleFilter",
-          [
-            "let",
-            "style",
-            [
-              "get",
-              "style"
-            ],
-            [
-              "!=",
-              [
-                "var",
-                "style"
-              ],
-              "•"
-            ]
-          ]
-        ]
-      ],
-      "layout": {
-        "icon-image": [
-          "concat",
-          [
-            "get",
-            "superclass"
-          ],
-          [
-            "case",
-            [
-              "has",
-              "class"
-            ],
-            [
-              "concat",
-              "-",
-              [
-                "get",
-                "class"
-              ]
-            ],
-            ""
-          ],
-          [
-            "case",
-            [
-              "has",
-              "subclass"
-            ],
-            [
-              "concat",
-              "-",
-              [
-                "get",
-                "subclass"
-              ]
-            ],
-            ""
-          ],
-          [
-            "get",
-            "style"
-          ]
-        ],
-        "text-anchor": "top",
-        "text-field": "{name:latin}\n{name:nonlatin}",
-        "text-font": [
-          "Noto Sans Regular"
-        ],
-        "text-max-width": 9,
-        "text-offset": [
-          0,
-          1
-        ],
-        "text-padding": 2,
-        "text-size": 12,
-        "text-optional": true
-      },
-      "paint": {
-        "text-color": [
-          "let",
-          "style",
-          [
-            "get",
-            "style"
-          ],
-          "superclass",
-          [
-            "get",
-            "superclass"
-          ],
-          [
-            "match",
-            [
-              "var",
-              "style"
-            ],
-            "•",
-            "#666",
-            [
-              "match",
-              [
-                "var",
-                "superclass"
-              ],
-              "amenity",
-              "#2a62ac",
-              "catering",
-              "#f09007",
-              "culture",
-              "#76009e",
-              "hosting",
-              "#99163a",
-              "leisure",
-              "#00a757",
-              "local_shop",
-              "#00a0c4",
-              "mobility",
-              "#3b74b9",
-              "products",
-              "#f25c05",
-              "public_landmark",
-              "#1d1d1b",
-              "remarkable",
-              "#e50980",
-              "safety",
-              "#e42224",
-              "services",
-              "#2a62ac",
-              "shopping",
-              "#808080",
-              "#666"
-            ]
-          ]
-        ],
-        "text-halo-blur": 0.5,
-        "text-halo-color": "#ffffff",
-        "text-halo-width": 1
-      }
-    },
-    {
-      "id": "poi-level-1",
-      "type": "symbol",
-      "source": "openmaptiles",
-      "source-layer": "poi_tourism",
-      "minzoom": 12,
-      "filter": [
-        "all",
-        [
-          "<=",
-          [
-            "get",
-            "rank"
-          ],
-          14
-        ],
-        [
-          "<=",
-          [
-            "get",
-            "zoom"
-          ],
-          [
-            "zoom"
-          ]
-        ],
-        [
-          "any",
-          [
-            "!",
-            [
-              "has",
-              "level"
-            ]
-          ],
-          [
-            "==",
-            [
-              "get",
-              "level"
-            ],
-            0
-          ]
-        ],
-        [
-          "let",
-          "_bloc_name",
-          "styleFilter",
-          [
-            "let",
-            "style",
-            [
-              "get",
-              "style"
-            ],
-            [
-              "!=",
-              [
-                "var",
-                "style"
-              ],
-              "•"
-            ]
-          ]
-        ]
-      ],
-      "layout": {
-        "icon-image": [
-          "concat",
-          [
-            "get",
-            "superclass"
-          ],
-          [
-            "case",
-            [
-              "has",
-              "class"
-            ],
-            [
-              "concat",
-              "-",
-              [
-                "get",
-                "class"
-              ]
-            ],
-            ""
-          ],
-          [
-            "case",
-            [
-              "has",
-              "subclass"
-            ],
-            [
-              "concat",
-              "-",
-              [
-                "get",
-                "subclass"
-              ]
-            ],
-            ""
-          ],
-          [
-            "get",
-            "style"
-          ]
-        ],
-        "text-anchor": "top",
-        "text-field": "{name:latin}\n{name:nonlatin}",
-        "text-font": [
-          "Noto Sans Regular"
-        ],
-        "text-max-width": 9,
-        "text-offset": [
-          0,
-          1
-        ],
-        "text-padding": 2,
-        "text-size": 12,
-        "text-optional": true
-      },
-      "paint": {
-        "text-color": [
-          "let",
-          "style",
-          [
-            "get",
-            "style"
-          ],
-          "superclass",
-          [
-            "get",
-            "superclass"
-          ],
-          [
-            "match",
-            [
-              "var",
-              "style"
-            ],
-            "•",
-            "#666",
-            [
-              "match",
-              [
-                "var",
-                "superclass"
-              ],
-              "amenity",
-              "#2a62ac",
-              "catering",
-              "#f09007",
-              "culture",
-              "#76009e",
-              "hosting",
-              "#99163a",
-              "leisure",
-              "#00a757",
-              "local_shop",
-              "#00a0c4",
-              "mobility",
-              "#3b74b9",
-              "products",
-              "#f25c05",
-              "public_landmark",
-              "#1d1d1b",
-              "remarkable",
-              "#e50980",
-              "safety",
-              "#e42224",
-              "services",
-              "#2a62ac",
-              "shopping",
-              "#808080",
-              "#666"
-            ]
-          ]
-        ],
         "text-halo-blur": 0.5,
         "text-halo-color": "#ffffff",
         "text-halo-width": 1

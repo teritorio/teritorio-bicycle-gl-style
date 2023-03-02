@@ -1372,6 +1372,180 @@
       }
     },
     {
+      "id": "military-fill",
+      "type": "fill",
+      "source": "openmaptiles",
+      "source-layer": "landuse",
+      "filter": [
+        "all",
+        [
+          "in",
+          "class",
+          "military"
+        ]
+      ],
+      "paint": {
+        "fill-color": "rgba(219, 94, 94, 1)",
+        "fill-opacity": {
+          "stops": [
+            [
+              10,
+              0
+            ],
+            [
+              11,
+              0.15
+            ],
+            [
+              14,
+              0.1
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "military-outer",
+      "type": "line",
+      "source": "openmaptiles",
+      "source-layer": "landuse",
+      "minzoom": 7,
+      "filter": [
+        "all",
+        [
+          "in",
+          "class",
+          "military"
+        ]
+      ],
+      "layout": {
+        "line-join": "bevel"
+      },
+      "paint": {
+        "line-color": "rgba(219, 94, 94, 1)",
+        "line-width": {
+          "stops": [
+            [
+              12,
+              3
+            ],
+            [
+              18,
+              6
+            ]
+          ]
+        },
+        "line-offset": 0,
+        "line-opacity": {
+          "stops": [
+            [
+              12,
+              0
+            ],
+            [
+              12.55,
+              0.25
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "military-inner",
+      "type": "line",
+      "source": "openmaptiles",
+      "source-layer": "park",
+      "minzoom": 7,
+      "filter": [
+        "all",
+        [
+          "in",
+          "class",
+          "military"
+        ]
+      ],
+      "paint": {
+        "line-color": "rgba(219, 94, 94, 1)",
+        "line-width": {
+          "stops": [
+            [
+              12,
+              3
+            ],
+            [
+              18,
+              6
+            ]
+          ]
+        },
+        "line-offset": {
+          "stops": [
+            [
+              12,
+              3
+            ],
+            [
+              18,
+              6
+            ]
+          ]
+        },
+        "line-opacity": {
+          "stops": [
+            [
+              12.5,
+              0
+            ],
+            [
+              13,
+              0.175
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "building-line",
+      "type": "line",
+      "metadata": {
+        "mapbox:group": "1444849364238.8171"
+      },
+      "source": "openmaptiles",
+      "source-layer": "building",
+      "filter": [
+        "==",
+        "$type",
+        "LineString"
+      ],
+      "paint": {
+        "line-color": {
+          "base": 1,
+          "stops": [
+            [
+              15.5,
+              "rgba(205, 197, 188, 1)"
+            ],
+            [
+              16,
+              "rgba(198, 189, 186, 1)"
+            ]
+          ]
+        },
+        "line-width": {
+          "stops": [
+            [
+              14,
+              2
+            ],
+            [
+              18,
+              6
+            ]
+          ]
+        }
+      }
+    },
+    {
       "id": "building",
       "type": "fill",
       "metadata": {
@@ -1379,6 +1553,11 @@
       },
       "source": "openmaptiles",
       "source-layer": "building",
+      "filter": [
+        "==",
+        "$type",
+        "Polygon"
+      ],
       "paint": {
         "fill-antialias": true,
         "fill-color": {
@@ -1404,6 +1583,11 @@
       },
       "source": "openmaptiles",
       "source-layer": "building",
+      "filter": [
+        "==",
+        "$type",
+        "Polygon"
+      ],
       "layout": {
         "visibility": "visible"
       },
@@ -9067,6 +9251,50 @@
       }
     },
     {
+      "id": "place-neighbourhood",
+      "type": "symbol",
+      "metadata": {
+        "mapbox:group": "1444849242106.713"
+      },
+      "source": "openmaptiles",
+      "source-layer": "place",
+      "minzoom": 14,
+      "filter": [
+        "all",
+        [
+          "in",
+          "class",
+          "neighbourhood"
+        ]
+      ],
+      "layout": {
+        "text-field": "{name:latin}\n{name:nonlatin}",
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-max-width": 8,
+        "text-size": {
+          "base": 1.2,
+          "stops": [
+            [
+              11,
+              6
+            ],
+            [
+              15,
+              12
+            ]
+          ]
+        },
+        "visibility": "visible"
+      },
+      "paint": {
+        "text-color": "#333",
+        "text-halo-color": "rgba(255,255,255,0.8)",
+        "text-halo-width": 1.2
+      }
+    },
+    {
       "id": "place-hamlet",
       "type": "symbol",
       "metadata": {
@@ -9075,11 +9303,13 @@
       "source": "openmaptiles",
       "source-layer": "place",
       "filter": [
-        "in",
-        "class",
-        "hamlet",
-        "suburb",
-        "neighbourhood"
+        "all",
+        [
+          "in",
+          "class",
+          "hamlet",
+          "suburb"
+        ]
       ],
       "layout": {
         "text-field": "{name:latin}\n{name:nonlatin}",

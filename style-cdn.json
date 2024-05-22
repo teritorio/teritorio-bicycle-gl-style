@@ -4302,6 +4302,7 @@
       "type": "line",
       "source": "openmaptiles",
       "source-layer": "transportation_bicycle",
+      "minzoom": 16,
       "filter": [
         "all",
         [
@@ -4467,6 +4468,7 @@
       "type": "line",
       "source": "openmaptiles",
       "source-layer": "transportation_bicycle",
+      "minzoom": 16,
       "filter": [
         "all",
         [
@@ -4597,6 +4599,7 @@
       "type": "line",
       "source": "openmaptiles",
       "source-layer": "transportation_bicycle",
+      "minzoom": 16,
       "filter": [
         "all",
         [
@@ -8191,6 +8194,434 @@
       },
       "paint": {
         "icon-opacity": 0.5
+      }
+    },
+    {
+      "id": "bicycle-facility-both-lowzoom",
+      "type": "line",
+      "source": "openmaptiles",
+      "source-layer": "transportation_bicycle",
+      "maxzoom": 16,
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "get",
+            "access_right"
+          ],
+          1
+        ],
+        [
+          "==",
+          [
+            "get",
+            "access_left"
+          ],
+          -1
+        ],
+        [
+          "has",
+          "facility_left"
+        ],
+        [
+          "==",
+          [
+            "get",
+            "facility_left"
+          ],
+          [
+            "get",
+            "facility_right"
+          ]
+        ]
+      ],
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "butt",
+        "line-join": "round"
+      },
+      "paint": {
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          10,
+          0,
+          12,
+          [
+            "case",
+            [
+              "has",
+              "facility_left"
+            ],
+            0.5,
+            0
+          ],
+          13,
+          [
+            "case",
+            [
+              "has",
+              "facility_right"
+            ],
+            0.5,
+            0
+          ],
+          14,
+          0.5
+        ],
+        "line-width": {
+          "stops": [
+            [
+              13,
+              3
+            ],
+            [
+              17,
+              5
+            ],
+            [
+              20,
+              10
+            ]
+          ]
+        },
+        "line-color": [
+          "match",
+          [
+            "get",
+            "facility_right"
+          ],
+          "lane",
+          "blue",
+          "busway",
+          "rgba(57, 73, 171,1)",
+          "pedestrian",
+          "green",
+          "rgba(127,127,127,.9)"
+        ],
+        "line-gap-width": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          13,
+          [
+            "match",
+            [
+              "get",
+              "highway"
+            ],
+            "track",
+            0,
+            "path",
+            0,
+            "pedestrian",
+            0,
+            "footway",
+            0,
+            "bridleway",
+            0,
+            "primary",
+            3,
+            "secondary",
+            2,
+            1
+          ],
+          18,
+          [
+            "match",
+            [
+              "get",
+              "highway"
+            ],
+            "track",
+            0,
+            "path",
+            0,
+            "pedestrian",
+            0,
+            "footway",
+            0,
+            "bridleway",
+            0,
+            "primary",
+            16,
+            "secondary",
+            14,
+            10
+          ]
+        ]
+      }
+    },
+    {
+      "id": "bicycle-facility-left-lowzoom",
+      "type": "line",
+      "source": "openmaptiles",
+      "source-layer": "transportation_bicycle",
+      "maxzoom": 16,
+      "filter": [
+        "all",
+        [
+          "has",
+          "facility_left"
+        ],
+        [
+          "==",
+          [
+            "get",
+            "access_left"
+          ],
+          -1
+        ],
+        [
+          "any",
+          [
+            "!=",
+            [
+              "get",
+              "access_right"
+            ],
+            1
+          ],
+          [
+            "!=",
+            [
+              "get",
+              "facility_left"
+            ],
+            [
+              "get",
+              "facility_right"
+            ]
+          ]
+        ]
+      ],
+      "layout": {
+        "visibility": "visible",
+        "line-join": "round",
+        "line-cap": "butt"
+      },
+      "paint": {
+        "line-offset": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          13,
+          -2,
+          16,
+          -5,
+          18,
+          -8,
+          20,
+          -16
+        ],
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          10,
+          0,
+          12,
+          [
+            "case",
+            [
+              "has",
+              "facility_left"
+            ],
+            0.5,
+            0
+          ],
+          13,
+          [
+            "case",
+            [
+              "has",
+              "facility_left"
+            ],
+            0.5,
+            0
+          ],
+          14,
+          0.5
+        ],
+        "line-width": {
+          "stops": [
+            [
+              13,
+              3
+            ],
+            [
+              17,
+              5
+            ],
+            [
+              20,
+              10
+            ]
+          ]
+        },
+        "line-color": [
+          "match",
+          [
+            "get",
+            "facility_left"
+          ],
+          "lane",
+          "blue",
+          "busway",
+          "rgba(57, 73, 171,1)",
+          "pedestrian",
+          "green",
+          "rgba(127,127,127,.9)"
+        ]
+      }
+    },
+    {
+      "id": "bicycle-facility-right-lowzoom",
+      "type": "line",
+      "source": "openmaptiles",
+      "source-layer": "transportation_bicycle",
+      "maxzoom": 16,
+      "filter": [
+        "all",
+        [
+          "has",
+          "facility_right"
+        ],
+        [
+          "==",
+          [
+            "get",
+            "access_right"
+          ],
+          1
+        ],
+        [
+          "any",
+          [
+            "!=",
+            [
+              "get",
+              "access_left"
+            ],
+            -1
+          ],
+          [
+            "!=",
+            [
+              "get",
+              "facility_right"
+            ],
+            [
+              "get",
+              "facility_left"
+            ]
+          ]
+        ]
+      ],
+      "layout": {
+        "visibility": "visible",
+        "line-cap": "butt",
+        "line-join": "round"
+      },
+      "paint": {
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          10,
+          0,
+          12,
+          [
+            "case",
+            [
+              "has",
+              "facility_right"
+            ],
+            0.5,
+            0
+          ],
+          13,
+          [
+            "case",
+            [
+              "has",
+              "facility_right"
+            ],
+            0.5,
+            0
+          ],
+          14,
+          0.5
+        ],
+        "line-width": {
+          "stops": [
+            [
+              13,
+              3
+            ],
+            [
+              17,
+              5
+            ],
+            [
+              20,
+              10
+            ]
+          ]
+        },
+        "line-color": [
+          "match",
+          [
+            "get",
+            "facility_right"
+          ],
+          "lane",
+          "blue",
+          "busway",
+          "rgba(57, 73, 171,1)",
+          "pedestrian",
+          "green",
+          "rgba(127,127,127,.9)"
+        ],
+        "line-offset": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          13,
+          2,
+          16,
+          5,
+          18,
+          8,
+          20,
+          16
+        ]
       }
     },
     {

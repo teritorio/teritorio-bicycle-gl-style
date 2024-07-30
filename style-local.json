@@ -46,12 +46,9 @@
       "source": "openmaptiles",
       "source-layer": "landcover",
       "filter": [
-        "all",
-        [
-          "==",
-          "class",
-          "sand"
-        ]
+        "==",
+        "class",
+        "sand"
       ],
       "layout": {
         "visibility": "visible"
@@ -705,12 +702,9 @@
       "source": "openmaptiles",
       "source-layer": "water",
       "filter": [
-        "all",
-        [
-          "==",
-          "class",
-          "ocean"
-        ]
+        "==",
+        "class",
+        "ocean"
       ],
       "layout": {
         "visibility": "visible"
@@ -728,12 +722,9 @@
       "source": "openmaptiles",
       "source-layer": "landcover",
       "filter": [
-        "all",
-        [
-          "==",
-          "class",
-          "wetland"
-        ]
+        "==",
+        "class",
+        "wetland"
       ],
       "paint": {
         "fill-color": {
@@ -772,12 +763,9 @@
       "source-layer": "landcover",
       "minzoom": 11,
       "filter": [
-        "all",
-        [
-          "==",
-          "class",
-          "wetland"
-        ]
+        "==",
+        "class",
+        "wetland"
       ],
       "paint": {
         "fill-pattern": "wetland64",
@@ -2305,11 +2293,8 @@
       }
     },
     {
-      "id": "tunnel-path-casing",
+      "id": "tunnel-path-steps-casing",
       "type": "line",
-      "metadata": {
-        "mapbox:group": "1444849345966.4436"
-      },
       "source": "openmaptiles",
       "source-layer": "transportation",
       "filter": [
@@ -4967,9 +4952,6 @@
     {
       "id": "highway-path-steps",
       "type": "line",
-      "metadata": {
-        "mapbox:group": "1444849345966.4436"
-      },
       "source": "openmaptiles",
       "source-layer": "transportation",
       "filter": [

@@ -1219,12 +1219,6 @@
           "==",
           "$type",
           "Polygon"
-        ],
-        [
-          "in",
-          "class",
-          "national_park",
-          "protected_area"
         ]
       ],
       "paint": {
@@ -1259,12 +1253,6 @@
           "==",
           "$type",
           "Polygon"
-        ],
-        [
-          "in",
-          "class",
-          "national_park",
-          "protected_area"
         ]
       ],
       "layout": {
@@ -1311,12 +1299,6 @@
           "==",
           "$type",
           "Polygon"
-        ],
-        [
-          "in",
-          "class",
-          "national_park",
-          "protected_area"
         ]
       ],
       "paint": {
@@ -9793,9 +9775,10 @@
           "Point"
         ],
         [
-          "==",
+          "in",
           "class",
-          "protected_area"
+          "protected_area",
+          "nature_reserve"
         ],
         [
           ">",
@@ -9854,9 +9837,10 @@
           "Point"
         ],
         [
-          "==",
+          "in",
           "class",
-          "protected_area"
+          "protected_area",
+          "nature_reserve"
         ],
         [
           "<=",
